@@ -13,6 +13,7 @@
   /* Background colors */
   --main-backgrond-cl: #2f303a;
   --main-btn-cl: #2196f3;
+  --button-hover: #188ce8;
   --background-portfolio-cl: #eeeeee;
   --logo-black-cl: #000000;
   /* Others */
@@ -25,7 +26,55 @@ body {
   letter-spacing: 0.03em;
   font-size: 14px;
 }
-/*.header-page {}*/
+h1,
+h2,
+h3,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.header-page {
+  border-bottom: var(--background-hero-cl);
+  padding-top: 32px;
+  padding-bottom: 32px;
+  outline: 1px solid tomato;
+}
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+.header-container {
+  display: flex;
+  align-items: center;
+}
 .logo {
   color: var(--main-btn-cl);
   font-family: var(--secondary-font);
@@ -37,24 +86,34 @@ body {
 }
 .logo-black {
   color: var(--main-txt-cl);
+  font-family: var(--secondary-font);
   font-weight: 700;
   font-size: 26px;
   text-decoration: none;
   line-height: calc(30.52 / 26);
   letter-spacing: 0.02em;
+  margin-right: 93px;
 }
 .logo-white {
+  font-family: var(--secondary-font);
   font-size: 26px;
   font-weight: 700;
   color: var(--background-txt-xl);
   text-decoration: none;
   line-height: calc(30.52 / 26);
   letter-spacing: 0.02em;
+  margin-right: 93px;
 }
 
 .header-nav {
+  display: flex;
+  align-items: center;
+
   list-style-type: none;
   font-weight: 500;
+}
+.header-nav li:not(:last-child) {
+  margin-right: 50px;
 }
 
 .nav-link-current {
@@ -77,6 +136,9 @@ body {
   color: #2196f3;
 }
 .header-contacts {
+  display: flex;
+  margin-left: auto;
+  gap: 50px;
   list-style: none;
   text-decoration: none;
   font-weight: 500;
@@ -102,8 +164,14 @@ body {
   text-align: center;
   background-color: var(--main-backgrond-cl);
   line-height: calc(60 / 44);
+  padding-top: 200px;
+  padding-bottom: 200px;
 }
 .hearo-title {
+  width: 696px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
   color: var(--background-txt-xl);
   text-transform: uppercase;
   font-weight: 900;
@@ -112,7 +180,12 @@ body {
   line-height: 1.36;
 }
 .hero-btn {
-  text-align: center;
+  display: block;
+  border: none;
+  border-radius: 4px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
   background-color: var(--main-btn-cl);
   color: var(--background-txt-xl);
   font-weight: 700;
@@ -124,7 +197,7 @@ body {
 }
 .hero-btn:focus,
 .hero-btn:hover {
-  color: var(--subtitle-txt-cl);
+  background-color: var(--button-hover);
 }
 .section-features {
   font-family: var(--main-font);
@@ -144,19 +217,28 @@ body {
   overflow: hidden;
 }
 .list-desk {
+  display: flex;
+  justify-content: center;
   list-style-type: none;
+}
+.list-desk li:not(:last-child) {
+  margin-right: 30px;
 }
 .subtitle {
   font-weight: 700;
   line-height: calc(16.41 / 14);
   text-transform: uppercase;
   color: var(--main-txt-cl);
+  margin-bottom: 10px;
 }
 .text-subtitle {
+  outline: 1px solid tomato;
+  gap: 30px;
   line-height: calc(24 / 14);
   color: var(--subtitle-txt-cl);
 }
-.section-img {
+.subtitle-img {
+  margin-bottom: 50px;
   font-weight: 700;
   font-size: 36px;
   line-height: calc(42.19 / 36);
@@ -164,7 +246,10 @@ body {
   color: var(--main-txt-cl);
 }
 .list-img {
+  display: flex;
+  align-items: center;
   list-style-type: none;
+  gap: 30px;
 }
 .section-team {
   font-weight: 700;
@@ -174,17 +259,31 @@ body {
   background-color: var(--background-btn-cl);
 }
 .team-title {
+  margin-bottom: 50px;
   font-weight: 700;
   font-size: 36px;
   line-height: calc(42.19 / 36);
   text-align: center;
   color: var(--main-txt-cl);
 }
+.team-list {
+  gap: 30px;
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
 .team-card {
+  outline: 1px solid tomato;
   list-style-type: none;
   text-align: left;
 }
+.img-team {
+  width: 270;
+  height: 260;
+  margin-bottom: 30px;
+}
 .team-name {
+  margin-bottom: 10px;
   font-weight: 500;
   font-size: 16px;
   line-height: calc(18.75 / 16);
@@ -192,6 +291,7 @@ body {
   color: var(--main-txt-cl);
 }
 .team-text {
+  margin-bottom: 30px;
   font-weight: 400;
   font-size: 16px;
   line-height: calc(18.75 / 16);
@@ -200,9 +300,14 @@ body {
 }
 .footer {
   background-color: var(--main-backgrond-cl);
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 .logo-footer {
   color: var(--background-txt-xl);
+}
+.logo {
+  padding-bottom: 20px;
 }
 .footer-list-contacts {
   list-style-type: none;
@@ -212,6 +317,7 @@ body {
   text-decoration: none;
   line-height: 24px;
   color: var(--background-txt-xl);
+  padding-bottom: 9px;
 }
 /*.link-addres {
 }
@@ -221,6 +327,7 @@ body {
   text-decoration: none;
   line-height: 24px;
   color: var(--footer-txt-cl);
+  padding-bottom: 9px;
 }
 .footer-mail:hover,
 :focus {
@@ -238,9 +345,18 @@ body {
 /* Portfolio*/
 /*.section-portfolio {}*/
 .list-btn {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+  margin-left: auto;
+  margin-right: auto;
   list-style-type: none;
+  gap: 8px;
 }
 .btn {
+  border: none;
+  border-radius: 4px;
+  padding: 6px 22px;
   background-color: var(--background-btn-cl);
   color: var(--main-txt-cl);
   font-family: inherit;
@@ -258,10 +374,38 @@ body {
 }
 
 .list-portfolio {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   text-decoration: none;
   list-style-type: none;
 }
+.list-parfolio-item {
+  background-color: var(--background-txt-xl);
+}
+.list-parfolio-item {
+  margin-right: 30px;
+}
+
+.list-parfolio-item:nth-child(3n) {
+  margin-right: 0;
+}
+
+.list-parfolio-item {
+  margin-bottom: 30px;
+}
+
+.list-parfolio-item:nth-child(n + 7) {
+  margin-bottom: 0;
+}
+.subtitle-card {
+  padding: 20px 24px;
+  border-bottom: 1px solid var(--background-portfolio-cl);
+  border-left: 1px solid var(--background-portfolio-cl);
+  border-right: 1px solid var(--background-portfolio-cl);
+}
 .subtitle-item {
+  margin-bottom: 4px;
   text-decoration: none;
   color: var(--main-txt-cl);
   font-weight: 700;
