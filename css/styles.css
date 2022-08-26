@@ -58,7 +58,7 @@ img {
   border-bottom: var(--background-hero-cl);
   padding-top: 32px;
   padding-bottom: 32px;
-  outline: 1px solid tomato;
+  /*outline: 1px solid tomato;*/
 }
 .container {
   width: 1200px;
@@ -232,7 +232,7 @@ img {
   margin-bottom: 10px;
 }
 .text-subtitle {
-  outline: 1px solid tomato;
+  /*outline: 1px solid tomato;*/
   gap: 30px;
   line-height: calc(24 / 14);
   color: var(--subtitle-txt-cl);
@@ -273,7 +273,7 @@ img {
   list-style: none;
 }
 .team-card {
-  outline: 1px solid tomato;
+  /*outline: 1px solid tomato;*/
   list-style-type: none;
   text-align: left;
 }
