@@ -288,8 +288,8 @@ img {
   /*margin-bottom: 30px; /* по макету отступ
 }*/
 .team-subtitle {
-  margin-bottom: 30px;
-  margin-top: 30px;
+  padding-bottom: 30px;
+  padding-top: 30px;
 }
 .team-name {
   margin-bottom: 10px; /*по макету отступ*/
@@ -329,7 +329,6 @@ img {
   text-decoration: none;
   line-height: 24px;
   color: var(--background-txt-xl);
-  padding-bottom: 9px;
 }
 /*.link-addres {
 }*/
